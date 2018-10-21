@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+header('Access-Control-Allow-Origin: *');
+
+
+Route::view('/{any?}', 'welcome')->where('any', '(.*?)');
