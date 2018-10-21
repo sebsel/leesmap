@@ -15,6 +15,13 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'xray' => env('XRAY_ROOT', 'https://xray.p3k.io'),
+
+    'twitter-api-key' => env('TWITTER_API_KEY'),
+    'twitter-api-secret' => env('TWITTER_API_SECRET'),
+    'twitter-access-token-key' => env('TWITTER_ACCESS_TOKEN_KEY'),
+    'twitter-access-token-secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -172,6 +179,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        App\Providers\Neo4jServiceProvider::class,
 
     ],
 
