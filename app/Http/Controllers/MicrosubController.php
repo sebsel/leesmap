@@ -64,10 +64,14 @@ class MicrosubController extends Controller
             case "liked":
                 $query = "match (entry:Entry)-[:LIKES]->(liked:Entry) " .
                     'with liked, count(entry) as likes ' .
-                    'return liked as ent order by likes desc limit 100';
+                    'return liked as ent order by likes desc, ent.published desc limit 100';
                 break;
             case "latest":
                 $query = 'match (ent:Entry) ' .
+                    'return ent order by ent.published desc limit 100';
+                break;
+            case "checkins":
+                $query = 'match (ent:Entry {post_type: "checkin"}) ' .
                     'return ent order by ent.published desc limit 100';
                 break;
             default:
@@ -91,6 +95,10 @@ class MicrosubController extends Controller
                 [
                     'uid' => 'latest',
                     'name' => 'Latest posts',
+                ],
+                [
+                    'uid' => 'checkins',
+                    'name' => 'Checkins',
                 ],
                 [
                     'uid' => 'liked',

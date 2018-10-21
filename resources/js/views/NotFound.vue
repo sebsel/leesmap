@@ -1,5 +1,5 @@
 <template>
-  <div>Oh noos, not found.</div>
+  <div>Hey, how'd you do?</div>
 </template>
 
 <script>
