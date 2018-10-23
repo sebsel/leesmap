@@ -13,5 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('microsub', 'MicrosubController@getEndpoint');
-Route::post('microsub', 'MicrosubController@postEndpoint');
+Route::get('microsub', 'MicrosubController@endpoint');
+Route::post('microsub', 'MicrosubController@endpoint');
