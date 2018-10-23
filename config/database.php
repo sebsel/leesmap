@@ -127,4 +127,16 @@ return [
 
     ],
 
+    'neo4j' => [
+
+        'default' => [
+            'host' => env('NEO4J_HOST', '127.0.0.1'),
+            'username' => env('NEO4J_USERNAME', 'neo4j'),
+            'password' => env('NEO4J_PASSWORD', null),
+            'port' => env('NEO4J_PORT', 7474),
+            'protocol' => env('NEO4J_PROTOCOL', 'http'),
+        ],
+
+    ],
+
 ];
